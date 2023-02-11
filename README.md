@@ -59,7 +59,10 @@ public class Startup implements CommandLineRunner {
     notificationFactory
         .create(NotificationType.PUSH_NOTIFICATION)
         .send(new PushNotificationModel("device123", "push1"));
+    
+    
 
+    //mailSender is also called from within the MailNotification class
     notificationFactory
         .create(NotificationType.MAIL)
         .send(new MailNotificationModel("subject1", "receiver", "recipient1"));
